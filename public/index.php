@@ -1,4 +1,9 @@
 <?php
-
-header('Location: ../src/Controller/controller-inscription.php');
-exit;
+session_start();
+if(!isset($_SESSION)){
+    header('Location: ../src/Controller/controller-connexion.php');
+    exit;
+} else {
+    header('Location: ../src/Controller/controller-index.php');
+    exit;
+}

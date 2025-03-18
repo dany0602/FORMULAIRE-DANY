@@ -19,10 +19,12 @@
 
 <div class="container d-flex justify-content-center mt-4">
 
-    <div class="row row-cols-3">
+    <div class="row row-cols-3 gap-2 justify-content-center">
 
         <?php foreach ($allPosts as $post) { ?>
-            <img src="../../assets/img/users/<?= $_SESSION['user_id']?>/<?= $post['pic_name'] ?>" class="mt-3 object-fit-contain" alt="">
+            <a href="controller-onepost.php?post=<?= $post['post_id'] ?>" class="col-lg-3">
+                <img src="../../assets/img/users/<?= $_SESSION['user_id']?>/<?= $post['pic_name'] ?>" alt="" class="col-12">
+            </a>
         <?php } ?>
 
     </div>

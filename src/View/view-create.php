@@ -13,6 +13,7 @@
             <label for="description">Commentaire</label>
         </div>
         <button class="btn btn-primary col-lg-2 col-8">Ajouter la photo</button>
+        
     </form>
 </main>
 

@@ -18,7 +18,7 @@
                 <i class="bi bi-chat"></i>
             </div>
             <span class="p-2">Afficher les 10 commentaires</span>
-            <span class="p-2">Ajouter un commentaire</span>
+            <a href="controller-onepost.php?post=<?= $value['post_id'] ?>" class="p-2">Afficher le post entier</a>
         </div>
     <?php } ?>
 

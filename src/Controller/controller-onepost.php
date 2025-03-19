@@ -9,6 +9,8 @@ if (!isset($_SESSION['user_id']) OR !isset($_GET['post']) OR empty($_GET['post']
 }
 
 require_once '../../config.php';
+require_once '../Model/model-likes.php';
+require_once '../Model/model-comments.php';
 
 // connexion à la base de données via PDO (PHP Data Objects) = création instance
 $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);

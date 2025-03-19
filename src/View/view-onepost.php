@@ -6,24 +6,27 @@
 <main class="d-flex flex-column align-items-center mt-4 mx-auto" style="max-width: 800px;">
 
 
-    <div class="d-flex flex-column align-self-start py-4">
+    <div class="d-flex flex-column align-self-start py-4 px-4">
         <a href=""><?= $uniquePost['user_pseudo'] ?></a>
         <span>28/10/2015</span>
     </div>
 
     <img src="../../assets/img/users/<?= $uniquePost['user_id'] ?>/<?= $uniquePost['pic_name'] ?>" alt="" style="max-width: 750px;">
-    <div class="d-flex flex-column align-self-start px-4"  style="width: 100%;">
+    <div class="d-flex flex-column align-self-start px-4 mt-2" style="width: 100%;">
+        <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-heart"></i><span><?= Likes::showLikes($uniquePost['post_id']) ?> likes</span>
+            <i class="bi bi-chat"></i><span><?= Comments::MontrerNombresCommentaires($uniquePost['post_id']) ?> commentaires</span>
+        </div>
         <span class="py-1"><?= $uniquePost['post_description'] ?></span>
 
         <div class="px-2 py-2 d-flex flex-column">
-        <?php foreach ($allComments as  $value) { ?> 
-         
-            <b><?= $value['user_pseudo'] ?></b>
-            <span><?= $value['com_text'] ?></span>
+            <?php foreach ($allComments as  $value) { ?>
 
-            <?php } ?> 
+                <b><?= $value['user_pseudo'] ?></b>
+                <span><?= $value['com_text'] ?></span>
+
+            <?php } ?>
         </div>
-
 
         <div class="p-1 py-4">
 

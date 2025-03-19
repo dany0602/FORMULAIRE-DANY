@@ -17,8 +17,13 @@
                 <i class="bi bi-heart"></i>
                 <i class="bi bi-chat"></i>
             </div>
-            <span class="p-2">Afficher les 10 commentaires</span>
-            <a href="controller-onepost.php?post=<?= $value['post_id'] ?>" class="p-2">Afficher le post entier</a>
+            <?php if(Comments::MontrerNombresCommentaires($value['post_id'])) { ?>
+                <span class="p-2">Afficher les <?= Comments::MontrerNombresCommentaires($value['post_id']) ?>  commentaires</span>
+                <a href="controller-onepost.php?post=<?= $value['post_id'] ?>" class="p-2">Afficher le post entier</a>
+                <?php } else { ?>
+                <span class="p-2">Cette image n'a pas de commentaire</span>
+                <a href="controller-onepost.php?post=<?= $value['post_id'] ?>" class="p-2">Afficher le post entier</a>
+                <?php } ?>
         </div>
     <?php } ?>
 

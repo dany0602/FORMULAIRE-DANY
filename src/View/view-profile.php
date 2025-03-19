@@ -6,9 +6,9 @@
     <img src="../../assets/img/users/10/paysage.png" alt="" class="col-1 rounded-pill">
     <div class="d-flex flex-column">
         <span class="fs-2"><?= $_SESSION['user_pseudo']?></span>
-        <span><b>2</b> publications</span>
-        <span><b>4</b> followers</span>
-        <span><b>6</b> suivi(e)s</span>
+        <span><b><?= $countProfile[0]['posts'] ?? "0" ?></b> publications</span>
+        <span><b><?= $countProfile[0]['followers'] ?? "0" ?></b> followers</span>
+        <span><b><?= $countProfile[0]['follows'] ?? "0" ?></b> suivi(e)s</span>
     </div>
 
     <div>
